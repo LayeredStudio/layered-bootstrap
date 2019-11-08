@@ -1,0 +1,21 @@
+
+body {
+	cursor: default;
+}
+
+a {
+	transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	letter-spacing: 0.3px;
+}
+
+.table thead th {
+	border: 0;
+}
+
+.vertical-text {
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+}

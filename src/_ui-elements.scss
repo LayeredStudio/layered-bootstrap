@@ -1,0 +1,237 @@
+
+/* UI - Page headings */
+
+.page-head {
+	background-color: $primary-lighter;
+	background-size: cover;
+	padding-top: 48px; /* header height */
+}
+
+.page-head.w-img {
+	// background-image: (...);
+}
+
+
+/* UI - show loader spinner */
+
+.loader,
+.btn:disabled .not-loader,
+.is-loading .not-loader {
+	display: none;
+}
+
+.btn:disabled .loader,
+.is-loading .loader {
+	display: inline-block;
+}
+
+
+/* UI - float element on hover */
+
+.on-hover {
+	transition: 0.2s ease-in;
+}
+
+.on-hover:hover {
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+	transform: translateY(-3px);
+}
+
+
+/* UI - nicer list points */
+
+.nicer-list {
+	padding-left: 1rem;
+}
+
+.nicer-list li {
+	list-style: none;
+	position: relative;
+	line-height: 1.7;
+}
+
+.nicer-list li:before {
+	content: "›";
+	position: absolute;
+	color: #c0c0c0;
+	top: 0;
+	left: -0.9rem;
+}
+
+.nicer-list.w-tick li:before {
+	content: "✓";
+	color: var(--success);
+	left: -1.1rem;
+}
+
+
+/* UI - hide children in a section */
+
+.hide-if-empty:empty {
+	display: none;
+}
+
+.hide-children .is-hidden-child {
+	display: none;
+}
+
+.has-state {
+	position: relative;
+}
+
+
+/* UI - show child on hover */
+
+.show-on-hover {
+	opacity: 0;
+	transition: opacity 0.1s ease-in-out;
+}
+
+.on-parent:hover .show-on-hover {
+	opacity: 1;
+}
+
+
+/* UI - add input state: saving, saved, error, etc */
+
+.switcher {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	padding-left: 55px;
+	height: 25px;
+	margin: 0;
+}
+
+.switcher input {
+	display: none;
+}
+
+.switcher__indicator::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #d5d5d5;
+	border-radius: 50%;
+	transition: all .3s ease;
+	animation-name: pulsein;
+	animation-duration: .3s;
+}
+
+.switcher__indicator::before {
+	content: '';
+	position: absolute;
+	top: 9px;
+	left: 0;
+	width: 55px;
+	height: 8px;
+	background-color: #d5d5d5;
+	border-radius: 3px;
+	transition: all .3s ease;
+}
+
+input:checked + .switcher__indicator::after {
+	background-color: var(--primary);
+	transform: translateX(30px);
+	animation-name: pulseout;
+	animation-duration: .3s;
+}
+
+input:checked + .switcher__indicator::before {
+	background-color: var(--primary);
+}
+
+input:disabled + .switcher__indicator::after,
+input:disabled + .switcher__indicator::before {
+	background-color: #e5e5e5;
+}
+
+@keyframes pulsein {
+  0%, 100% {
+    top: 0px;
+    height: 25px;
+    width: 25px;
+  }
+  50% {
+    top: 5px;
+    height: 15px;
+    width: 35px;
+  }
+}
+
+@keyframes pulseout {
+  0%, 100% {
+    top: 0px;
+    height: 25px;
+    width: 25px;
+  }
+  50% {
+    top: 5px;
+    height: 15px;
+    width: 35px;
+  }
+}
+
+
+/* UI - add input state: saving, saved, error, etc */
+
+.has-state:after {
+	position: absolute;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	content: " ";
+	color: transparent;
+	right: -25px;
+	top: 50%;
+	margin-top: -12px;
+	transition: color .2s ease-in-out;
+	font-family: 'Icons';
+	line-height: 24px;
+	text-align: center;
+}
+
+.has-state.state-saving:after {
+	color: var(--info);
+	content: '\e007';
+	animation: anim-spin 2s infinite ease-in-out;
+}
+
+.has-state.state-saved:after {
+	color: var(--success);
+	content: '\e033';
+}
+
+.has-state.state-error:after {
+	color: var(--danger);
+	content: '\e0d8';
+}
+
+
+
+/* UI - Site footer */
+
+.site-footer {
+	border-top: 5px solid $primary;
+	color: $gray-200;
+	background-color: $purple;
+}
+
+.site-footer.mini {
+	font-size: 0.8rem;
+}
+
+.site-footer a {
+	color: $gray-100;
+	border-bottom: 3px solid transparent;
+}
+
+.site-footer a:hover {
+	color: #fff;
+	border-color: $primary;
+	text-decoration: none;
+}
+

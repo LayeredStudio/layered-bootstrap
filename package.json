@@ -1,0 +1,47 @@
+{
+  "name": "@layered/layered-design",
+  "version": "1.0.0",
+  "description": "Layered design system, based on Bootstrap",
+  "style": "dist/layered.css",
+  "sass": "src/layered.scss",
+  "main": "dist/layered.js",
+  "scripts": {
+    "prettier": "prettier \"src/**/*.{js,sass}\"",
+    "prettier:write": "npm run prettier -- --write",
+    "build": "NODE_ENV=production webpack --hide-modules",
+    "build:dev": "NODE_ENV=development webpack --hide-modules",
+    "watch": "npm run build -- --watch",
+    "watch:dev": "HMR=true npm run build:dev -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/LayeredStudio/layered-design.git"
+  },
+  "keywords": [
+    "layered",
+    "bootstrap",
+    "design",
+    "css",
+    "sass"
+  ],
+  "author": "Andrei Igna <andrei@laye.red>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LayeredStudio/layered-design/issues"
+  },
+  "homepage": "https://github.com/LayeredStudio/layered-design#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
+  },
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}

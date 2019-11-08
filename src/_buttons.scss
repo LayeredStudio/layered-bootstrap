@@ -1,0 +1,40 @@
+
+
+.btn {
+	text-transform: uppercase;
+	/*mix-blend-mode: multiply;*/
+
+}
+
+@each $color, $value in $theme-colors {
+	.btn-#{$color} {
+		border-color: transparent;
+		box-shadow: 0 8px 24px rgba(16,31,59,0.08);
+
+		&:hover {
+			box-shadow: 0 8px 24px rgba(16,31,59,0.15);
+			border-color: transparent;
+		}
+	}
+}
+
+
+// Workaround - make lighter primary buttons
+
+.btn-primary {
+	background: linear-gradient(65deg, $primary-light -25%, lighten($primary-light, 12%) 100%);
+
+	&:hover {
+		background: linear-gradient(65deg, #6b56f7 -25%, #9687f9 100%);
+	}
+}
+
+.btn-outline-primary {
+	color: $primary-light;
+	border-color: $primary-light;
+
+	&:hover {
+		background: linear-gradient(65deg, #6b56f7 -25%, #9687f9 100%);
+		border-color: #6b56f7;
+	}
+}

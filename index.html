@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<meta name="theme-color" content="#460d8d">
+
+		<title>Layered's design system</title>
+
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://laye.red">
+		<meta property="og:title" content="Layered Design">
+		<meta property="og:description" content="Layered design system, based on Bootstrap">
+		<meta property="og:site_name" content="Layered Design">
+		<meta name="description" content="Layered design system, based on Bootstrap">
+
+		<script>
+		var L = {
+			version:	'1.0.0',
+			siteUrl:	'https://laye.red',
+			apiUrl:		'https://laye.red/api',
+			user:		null
+		};
+		</script>
+
+		<link rel="stylesheet" href="dist/layered.css">
+	</head>
+	<body>
+
+		<nav class="navbar navbar-expand-lg fixed-top">
+			<a class="navbar-brand" href="">Layered Design</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">👋 Menu</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#get-started">Get Started</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#components">Components</a>
+					</li>
+				</ul>
+
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ml-4">
+						<a class="nav-link btn btn-primary" href="#">Sign in</a>
+					</li>
+					<li class="nav-item ml-2">
+						<a class="nav-link" href="#">Create account</a>
+					</li>
+					<li class="nav-item dropdown ml-3 active">
+						<a class="nav-link dropdown-toggle btn btn-outline-primary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							<img class="rounded-circle mr-1" src="https://files.layered.market/neutral-2.png" alt="Anonymous" width="19" height="19" />
+							Anonymous
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Account</a>
+							<a class="dropdown-item" href="#">Billing</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Logout</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+
+		<div id="content">
+
+			<div class="page-head">
+				<div class="container">
+					<div class="row py-5 align-items-center">
+						<div class="col-12 col-md-7 order-md-2">
+							<img src="https://nextrace.org/assets/img-nextrace.png" class="img-fluid" alt="Layered Illustration" />
+						</div>
+						<div class="col-12 col-md-5 order-md-1">
+							<h2 class="display-4 text-center text-md-left">Incredible layouts</h2>
+							<p class="lead text-center text-md-left">Can be buil with this Layered's design system</p>
+							<p class="text-muted text-center text-md-left">For real</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<section class="py-5" id="get-started">
+
+				<div class="container">
+					<h2>How to use</h2>
+					<p class="lead">Include it in your projects like this:</p>
+					
+					<h4>JS &amp; CSS</h4>
+					<pre><code class="language-html">&lt;link rel="stylesheet" href="dist/layered.css"&gt;
+&lt;script src="http://jsdelivr.net/..."&gt;&lt;/script&gt;</code></pre>
+
+					<h4>JS &amp; SASS</h4>
+					<p>Install the library <code>npm i @layered/layered-design</code></p>
+					<p>Then include it in your project</p>
+					<pre><code class="language-sass">// main.scss
+@import '~layered';</code></pre>
+				</div>
+
+			</section>
+
+
+			<section class="py-5 bg-white" id="components">
+
+				<div class="container">
+
+					<h2>Components</h2>
+					<p class="lead">It includes all Bootstrap components, and it has custom styles for a few of them.</p>
+
+					<div class="row">
+						<div class="col-md-6 col-lg-4">
+							<a href="#alerts" class="card card-link my-2">
+								<div class="card-body">
+									<h3 class="card-title">Alerts</h3>
+									<p class="card-text">The nicest alerts</p>
+								</div>
+								<div class="card-footer">
+									<div class="row">
+										<div class="col-auto">
+											5 ⭐️
+										</div>
+										<div class="col text-right text-muted text-uppercase">
+											It's free
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<a href="#buttons" class="card card-link my-2">
+								<img class="card-img-top" src="https://files.layered.market/plugins/more-visibility-rules-banner.jpg" alt="Buttons" loading="lazy">
+								<div class="card-body">
+									<h3 class="card-title">Buttons</h3>
+									<p class="card-text">See button examples</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+
+			<section class="py-5">
+
+				<div class="container" id="alerts">
+
+					<h2>Alerts</h2>
+
+					<div class="row">
+						<div class="col-md-6">
+							<div class="alert alert-primary" role="alert">
+							  A simple primary alert—check it out!
+							</div>
+							<div class="alert alert-secondary" role="alert">
+							  A simple secondary alert—check it out!
+							</div>
+							<div class="alert alert-success" role="alert">
+							  A simple success alert—check it out!
+							</div>
+							<div class="alert alert-danger" role="alert">
+							  A simple danger alert—check it out!
+							</div>
+							
+						</div>
+						<div class="col-md-6">
+							<div class="alert alert-warning" role="alert">
+							  A simple warning alert—check it out!
+							</div>
+							<div class="alert alert-info" role="alert">
+							  A simple info alert—check it out!
+							</div>
+							<div class="alert alert-light" role="alert">
+							  A simple light alert—check it out!
+							</div>
+							<div class="alert alert-dark" role="alert">
+							  A simple dark alert—check it out!
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+
+			<section class="py-5">
+
+				<div class="container" id="alerts">
+
+					<h2>Buttons</h2>
+
+					<p>
+						<button type="button" class="btn btn-primary">Primary</button>
+						<button type="button" class="btn btn-secondary">Secondary</button>
+						<button type="button" class="btn btn-success">Success</button>
+						<button type="button" class="btn btn-danger">Danger</button>
+						<button type="button" class="btn btn-warning">Warning</button>
+						<button type="button" class="btn btn-info">Info</button>
+						<button type="button" class="btn btn-light">Light</button>
+						<button type="button" class="btn btn-dark">Dark</button>
+						<button type="button" class="btn btn-link">Link</button>
+						<button type="button" class="btn">.btn</button>
+					</p>
+
+					<p>
+						<button type="button" class="btn btn-outline-primary">Primary</button>
+						<button type="button" class="btn btn-outline-secondary">Secondary</button>
+						<button type="button" class="btn btn-outline-success">Success</button>
+						<button type="button" class="btn btn-outline-danger">Danger</button>
+						<button type="button" class="btn btn-outline-warning">Warning</button>
+						<button type="button" class="btn btn-outline-info">Info</button>
+						<button type="button" class="btn btn-outline-light">Light</button>
+						<button type="button" class="btn btn-outline-dark">Dark</button>
+					</p>
+				</div>
+
+			</section>
+
+
+			<section class="bg-white">
+
+				<div class="row justify-content-center">
+					<div class="col col-md-8 py-5">
+						<div class="text-white shadow-sm rounded p-5 my-3 bg-primary-light">
+							<p class="lead">Get notified when we publish WordPress articles &amp; plugin updates <span class="text-primary ml-1">→</span></p>
+
+							<form class="js-newsletter" method="post" action="/links">
+								<div class="input-group">
+									<input type="email" name="email" required class="form-control" placeholder="Enter your email">
+									<div class="input-group-append">
+										<button type="submit" class="input-group btn btn-light">
+											<span class="not-loader">Subscribe</span>
+											<span class="loader">
+												<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+												Subscribing...
+											</span>
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+		</div>
+
+
+		<section class="section-feedback bg-warning py-2">
+			<p class="text-center mb-0">It even has this tiny helpful section. <a href="#"><u>Which can have links</u></a></p>
+		</section>
+
+
+		<footer class="site-footer pt-5 pb-4">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<h5>Layered Design</h5>
+						<ul class="nicer-list">
+							<li><a href="#">Submenu</a></li>
+							<li><a href="#">Support</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-6 col-md-3">
+						<h4>Layered</h4>
+						<ul class="nicer-list">
+							<li><a href="https://laye.red" target="_blank">Layered</a></li>
+							<li><a href="https://medium.com/layered/tagged/wordpress" target="_blank">Blog</a></li>
+							<li>
+								<a href="https://twitter.com/LayeredMarket" target="_blank" class="social-link social-link-twitter">@LayeredMarket</a>&nbsp;
+							</li>
+						</ul>
+					</div>
+					<div class="col-xs-6 col-md-3">
+						<h4>Resources</h4>
+						<ul class="nicer-list">
+							<li><a href="#">Terms &amp; Conditions</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="dist/layered.js"></script>
+
+	</body>
+</html>
