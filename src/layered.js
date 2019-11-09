@@ -74,3 +74,5 @@ L.toast.error = function(content, title, options) {
 	options.type = 'error';
 	return L.toast(content, title, options);
 }
+
+window.jQuery = jQuery
