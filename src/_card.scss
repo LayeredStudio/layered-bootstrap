@@ -4,7 +4,8 @@
 	transition: box-shadow 0.2s ease-in-out;
 
 	.card-footer {
-		border-color: #f0f0f0;
+		border-color: $gray-200;
+		border-top-width: 1px;
 		background-color: #fff;
 		font-size: 0.9rem;
 	}
