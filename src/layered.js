@@ -26,7 +26,7 @@ L.toast = function(content, title, options) {
 	options = Object.assign({
 		type:		'info',
 		subtitle:	'',
-		delay:		40000
+		delay:		5000
 	}, options || {});
 
 	options.delay = Number.isInteger(options.delay) && options.delay > 0 ? `data-delay="${options.delay}"` : 'data-autohide="false"';
@@ -35,7 +35,7 @@ L.toast = function(content, title, options) {
 	var toasts = jQuery('.toasts');
 	if (!toasts.length) {
 		toasts = jQuery('<div class="toasts" aria-live="polite" aria-atomic="true" style="position: fixed;bottom: 1rem;right: 1rem;"></div>').appendTo(document.body).on('hidden.bs.toast', '.toast', function() {
-			$(this).remove();
+			jQuery(this).remove();
 		});
 	}
 
