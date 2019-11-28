@@ -1,9 +1,9 @@
 
 // Color system
 
-$primary: #460d8d;
-$primary-light: #6954F7;
-$primary-lighter: transparentize($primary, 0.93);
+$primary: #460d8d !default;
+$primary-light: #6954F7 !default;
+$primary-lighter: transparentize($primary, 0.93) !default;
 
 $theme-colors: (
     "primary-light": $primary-light,
@@ -20,40 +20,40 @@ $spacers: (
 
 // Body
 
-$body-bg: #f4f8fb;
+$body-bg: #f4f8fb !default;
 
 
 // Typography
 
-$font-weight-base: 300;
-$headings-font-weight: 700;
-$text-muted: #738a94;
+$font-weight-base: 300 !default;
+$headings-font-weight: 700 !default;
+$text-muted: #738a94 !default;
 
 // Buttons
 
-$btn-font-size:  14px;
-$btn-font-weight: 500;
-$btn-padding-x: 1rem;
+$btn-font-size:  14px !default;
+$btn-font-weight: 500 !default;
+$btn-padding-x: 1rem !default;
 $btn-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
-$btn-font-size-sm: 0.8rem;
+$btn-font-size-sm: 0.8rem !default;
 
-$btn-font-size-lg: 1rem;
+$btn-font-size-lg: 1rem !default;
 
 
 // Navbar
 
-$navbar-padding-y: 0.25rem;
+$navbar-padding-y: 0.25rem !default;
 
 
 // Cards
 
-$card-border-width: 0;
+$card-border-width: 0 !default;
 
 
 // Image thumbnails
 
-$thumbnail-padding: .1rem;
-$thumbnail-border-width: 0;
+$thumbnail-padding: .1rem !default;
+$thumbnail-border-width: 0 !default;
 
 
