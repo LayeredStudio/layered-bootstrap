@@ -1,6 +1,6 @@
 {
   "name": "@layered/layered-design",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Layered design system, based on Bootstrap",
   "style": "dist/layered.css",
   "sass": "src/layered.scss",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/LayeredStudio/layered-design#readme",
   "dependencies": {
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0"
   },
@@ -40,7 +40,7 @@
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
-    "style-loader": "^1.0.0",
+    "style-loader": "^1.0.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   }
