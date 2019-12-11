@@ -216,7 +216,7 @@ input:disabled + .switcher__indicator::before {
 
 .site-footer {
 	border-top: 5px solid $primary;
-	color: $gray-200;
+	color: $gray-100;
 	background-color: $purple;
 }
 
@@ -225,7 +225,7 @@ input:disabled + .switcher__indicator::before {
 }
 
 .site-footer a {
-	color: $gray-100;
+	color: $gray-200;
 	border-bottom: 3px solid transparent;
 }
 
