@@ -17,7 +17,7 @@
 
 		<script>
 		var L = {
-			version:	'1.0.4',
+			version:	'1.0.6',
 			siteUrl:	'https://laye.red',
 			apiUrl:		'https://laye.red/api',
 			user:		null
@@ -29,16 +29,16 @@
 	<body>
 
 		<nav class="navbar navbar-expand-lg fixed-top">
-			<a class="navbar-brand" href="">Layered Design</a>
+			<a class="navbar-brand" href="index.html">Layered Design</a>
 			<button class="navbar-toggler text-primary-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">&#9776; Menu</button>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav">
-					<li class="nav-item active">
-						<a class="nav-link" href="#get-started">Get Started</a>
+					<li class="nav-item">
+						<a class="nav-link" href="brand.html">Brand</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#components">Components</a>
+						<a class="nav-link" href="components.html">Components</a>
 					</li>
 				</ul>
 
@@ -75,191 +75,50 @@
 							<img src="https://nextrace.org/assets/img-nextrace.png" class="img-fluid" alt="Layered Illustration" />
 						</div>
 						<div class="col-12 col-md-5 order-md-1">
-							<h2 class="display-4 text-center text-md-left">Incredible layouts</h2>
-							<p class="lead text-center text-md-left">Can be buil with this Layered's design system</p>
-							<p class="text-muted text-center text-md-left"><span data-toggle="tooltip" title="Yes it has tooltips">For real</span></p>
+							<h2 class="display-4 text-center text-md-left">Design, develop, and deliver</h2>
+							<p class="lead text-center text-md-left">A collection of design resources, reusable components and guidelines for creating <a href="https://laye.red">Layered</a> products</p>
 						</div>
 					</div>
 				</div>
 			</div>
 
 
-			<section class="py-5" id="get-started">
-
-				<div class="container">
-					<h2>How to use</h2>
-					<p class="lead">Include it in your projects like this:</p>
-					
-					<h4>JS &amp; CSS</h4>
-					<pre><code class="language-html">&lt;link rel="stylesheet" href="dist/layered.css"&gt;
-&lt;script src="http://jsdelivr.net/..."&gt;&lt;/script&gt;</code></pre>
-
-					<h4>JS &amp; SASS</h4>
-					<p>Install the library <code>npm i @layered/layered-design</code></p>
-					<p>Then include it in your project</p>
-					<pre><code class="language-sass">// main.scss
-@import '~@layered/layered-design';</code></pre>
-				</div>
-
-			</section>
-
-
 			<section class="py-5 bg-white" id="components">
 
 				<div class="container">
 
-					<h2>Components</h2>
-					<p class="lead">It includes all Bootstrap components, and it has custom styles for a few of them.</p>
-
 					<div class="row">
 						<div class="col-md-6 col-lg-4">
-							<a href="#alerts" class="card card-link my-2">
+							<a href="brand.html" class="card card-link my-2">
+								<img class="card-img-top" src="https://pbs.twimg.com/profile_banners/1125045284319498240/1557227200/1500x500" alt="Marketing" loading="lazy">
 								<div class="card-body">
-									<h3 class="card-title">Alerts</h3>
-									<p class="card-text">The nicest alerts</p>
+									<h3 class="card-title">Brand</h3>
+									<p class="card-text">Foundations, including personality, writing style, color, and typography.</p>
+								</div>
+							</a>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<a href="brand.html" class="card card-link my-2">
+								<img class="card-img-top" src="https://layered.studio/images/img-about.jpg" alt="Layered" loading="lazy">
+								<div class="card-body">
+									<h3 class="card-title">Marketing</h3>
+									<p class="card-text">How color, type, and illustration are used across marketing materials.</p>
+								</div>
+							</a>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<a href="components.html" class="card card-link my-2">
+								<img class="card-img-top" src="https://files.layered.market/plugins/more-visibility-rules-banner.jpg" alt="Components" loading="lazy">
+								<div class="card-body">
+									<h3 class="card-title">Components</h3>
+									<p class="card-text">Reusable components and patterns for building applications.</p>
 								</div>
 								<div class="card-footer">
-									<div class="row">
-										<div class="col-auto">
-											5 ⭐️
-										</div>
-										<div class="col text-right text-muted text-uppercase">
-											It's free
-										</div>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-6 col-lg-4">
-							<a href="#buttons" class="card card-link my-2">
-								<img class="card-img-top" src="https://files.layered.market/plugins/more-visibility-rules-banner.jpg" alt="Buttons" loading="lazy">
-								<div class="card-body">
-									<h3 class="card-title">Buttons</h3>
-									<p class="card-text">See button examples</p>
+									27 components
 								</div>
 							</a>
 						</div>
 					</div>
-				</div>
-
-			</section>
-
-
-			<section class="py-5">
-
-				<div class="container" id="alerts">
-
-					<h2 class="mb-3">Alerts</h2>
-
-					<div class="row">
-						<div class="col-md-6">
-							<div class="alert alert-primary" role="alert">
-							  A simple primary alert—check it out!
-							</div>
-							<div class="alert alert-secondary" role="alert">
-							  A simple secondary alert—check it out!
-							</div>
-							<div class="alert alert-success" role="alert">
-							  A simple success alert—check it out!
-							</div>
-							<div class="alert alert-danger" role="alert">
-							  A simple danger alert—check it out!
-							</div>
-							
-						</div>
-						<div class="col-md-6">
-							<div class="alert alert-warning" role="alert">
-							  A simple warning alert—check it out!
-							</div>
-							<div class="alert alert-info" role="alert">
-							  A simple info alert—check it out!
-							</div>
-							<div class="alert alert-light" role="alert">
-							  A simple light alert—check it out!
-							</div>
-							<div class="alert alert-dark" role="alert">
-							  A simple dark alert—check it out!
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</section>
-
-
-			<section class="py-5 bg-white">
-
-				<div class="container" id="alerts">
-
-					<h2 class="mb-3">Buttons</h2>
-
-					<p>
-						<button type="button" class="btn btn-primary">Primary</button>
-						<button type="button" class="btn btn-secondary">Secondary</button>
-						<button type="button" class="btn btn-success">Success</button>
-						<button type="button" class="btn btn-danger">Danger</button>
-						<button type="button" class="btn btn-warning">Warning</button>
-						<button type="button" class="btn btn-info">Info</button>
-						<button type="button" class="btn btn-light">Light</button>
-						<button type="button" class="btn btn-dark">Dark</button>
-						<button type="button" class="btn btn-link">Link</button>
-						<button type="button" class="btn">.btn</button>
-					</p>
-
-					<p>
-						<button type="button" class="btn btn-outline-primary">Primary</button>
-						<button type="button" class="btn btn-outline-secondary">Secondary</button>
-						<button type="button" class="btn btn-outline-success">Success</button>
-						<button type="button" class="btn btn-outline-danger">Danger</button>
-						<button type="button" class="btn btn-outline-warning">Warning</button>
-						<button type="button" class="btn btn-outline-info">Info</button>
-						<button type="button" class="btn btn-outline-light">Light</button>
-						<button type="button" class="btn btn-outline-dark">Dark</button>
-					</p>
-				</div>
-
-			</section>
-
-
-			<section class="py-5">
-
-				<div class="container" id="alerts">
-
-					<h2 class="mb-3">Images</h2>
-
-					<img src="https://files.layered.market/plugins/if-menu-icon.jpg" width="100" height="100" alt="If Menu - Visibility control for menu items" class="img-thumbnail" loading="lazy">
-				</div>
-
-			</section>
-
-
-			<section class="py-5 bg-white">
-
-				<div class="container" id="alerts">
-
-					<h2 class="mb-3">Navs</h2>
-
-					<ul class="nav my-2">
-						<li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-						<li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a></li>
-					</ul>
-
-					<ul class="nav nav-tabs my-2">
-						<li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-						<li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a></li>
-					</ul>
-
-					<ul class="nav nav-pills my-2">
-						<li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-						<li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a></li>
-					</ul>
-
 				</div>
 
 			</section>
@@ -310,13 +169,14 @@
 						<ul class="nicer-list">
 							<li><a href="#">Submenu</a></li>
 							<li><a href="#">Support</a></li>
+							<li><span class="badge badge-light js-version">v1.0.0</span></li>
 						</ul>
 					</div>
 					<div class="col-xs-6 col-md-3">
 						<h5 class="subtitle">Layered</h5>
 						<ul class="nicer-list">
 							<li><a href="https://laye.red" target="_blank">Layered</a></li>
-							<li><a href="https://medium.com/layered/tagged/wordpress" target="_blank">Blog</a></li>
+							<li><a href="https://medium.com/layered" target="_blank">Blog</a></li>
 							<li>
 								<a href="https://twitter.com/LayeredMarket" target="_blank" class="social-link social-link-twitter">@LayeredMarket</a>&nbsp;
 							</li>

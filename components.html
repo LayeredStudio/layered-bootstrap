@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<meta name="theme-color" content="#460d8d">
+
+		<title>Layered's design system</title>
+
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://laye.red">
+		<meta property="og:title" content="Layered Design">
+		<meta property="og:description" content="Layered design system, based on Bootstrap">
+		<meta property="og:site_name" content="Layered Design">
+		<meta name="description" content="Layered design system, based on Bootstrap">
+
+		<script>
+		var L = {
+			version:	'1.0.6',
+			siteUrl:	'https://laye.red',
+			apiUrl:		'https://laye.red/api',
+			user:		null
+		};
+		</script>
+
+		<link rel="stylesheet" href="dist/layered.css">
+	</head>
+	<body>
+
+		<nav class="navbar navbar-expand-lg fixed-top">
+			<a class="navbar-brand" href="index.html">Layered Design</a>
+			<button class="navbar-toggler text-primary-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">&#9776; Menu</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="brand.html">Brand</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="components.html">Components</a>
+					</li>
+				</ul>
+
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ml-4">
+						<a class="nav-link btn btn-primary" href="#">Sign in</a>
+					</li>
+					<li class="nav-item ml-2">
+						<a class="nav-link" href="#">Create account</a>
+					</li>
+					<li class="nav-item dropdown ml-3 active">
+						<a class="nav-link dropdown-toggle btn btn-outline-primary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							<img class="rounded-circle mr-1" src="https://files.layered.market/neutral-2.png" alt="Anonymous" width="19" height="19" />
+							Anonymous
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Account</a>
+							<a class="dropdown-item" href="#">Billing</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Logout</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+
+		<div id="content">
+
+			<div class="page-head">
+				
+			</div>
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-2 border-right py-3">
+
+						<div class="sticky-top" style="top: 64px">
+							<p class="lead mb-1"><a href="index.html">Layered Design</a></p>
+							<p class="lead mb-1"><a href="">Brand</a></p>
+							<p class="lead mb-1"><a href="">Marketing</a></p>
+							<p class="lead mb-1"><a href="components.html">Components</a></p>
+							<ul class="nav flex-column">
+								<li class="nav-item">
+									<a class="nav-link active" href="#">How to use</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#alerts">Alerts</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#buttons">Buttons</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#images">Images</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#navs">Navs</a>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+					<div class="col-md-10">
+						<section class="py-5 bg-white" id="get-started">
+
+							<div class="container">
+								<h2>How to use</h2>
+								<p class="lead">Include it in your projects like this:</p>
+								
+								<h4>JS &amp; CSS</h4>
+								<pre><code class="language-html">&lt;link rel="stylesheet" href="dist/layered.css"&gt;
+			&lt;script src="http://jsdelivr.net/..."&gt;&lt;/script&gt;</code></pre>
+
+								<h4>JS &amp; SASS</h4>
+								<p>Install the library <code>npm i @layered/layered-design</code></p>
+								<p>Then include it in your project</p>
+								<pre><code class="language-sass">// main.scss
+			@import '~@layered/layered-design';</code></pre>
+							</div>
+
+						</section>
+
+
+						<section class="py-5 bg-light">
+
+							<div class="container" id="alerts">
+
+								<h2 class="mb-3">Alerts</h2>
+
+								<div class="row">
+									<div class="col-md-6">
+										<div class="alert alert-primary" role="alert">
+										  A simple primary alert—check it out!
+										</div>
+										<div class="alert alert-secondary" role="alert">
+										  A simple secondary alert—check it out!
+										</div>
+										<div class="alert alert-success" role="alert">
+										  A simple success alert—check it out!
+										</div>
+										<div class="alert alert-danger" role="alert">
+										  A simple danger alert—check it out!
+										</div>
+										
+									</div>
+									<div class="col-md-6">
+										<div class="alert alert-warning" role="alert">
+										  A simple warning alert—check it out!
+										</div>
+										<div class="alert alert-info" role="alert">
+										  A simple info alert—check it out!
+										</div>
+										<div class="alert alert-light" role="alert">
+										  A simple light alert—check it out!
+										</div>
+										<div class="alert alert-dark" role="alert">
+										  A simple dark alert—check it out!
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</section>
+
+
+						<section class="py-5 bg-white">
+
+							<div class="container" id="buttons">
+
+								<h2 class="mb-3">Buttons</h2>
+
+								<p>
+									<button type="button" class="btn btn-primary">Primary</button>
+									<button type="button" class="btn btn-secondary">Secondary</button>
+									<button type="button" class="btn btn-success">Success</button>
+									<button type="button" class="btn btn-danger">Danger</button>
+									<button type="button" class="btn btn-warning">Warning</button>
+									<button type="button" class="btn btn-info">Info</button>
+									<button type="button" class="btn btn-light">Light</button>
+									<button type="button" class="btn btn-dark">Dark</button>
+									<button type="button" class="btn btn-link">Link</button>
+									<button type="button" class="btn">.btn</button>
+								</p>
+
+								<p>
+									<button type="button" class="btn btn-outline-primary">Primary</button>
+									<button type="button" class="btn btn-outline-secondary">Secondary</button>
+									<button type="button" class="btn btn-outline-success">Success</button>
+									<button type="button" class="btn btn-outline-danger">Danger</button>
+									<button type="button" class="btn btn-outline-warning">Warning</button>
+									<button type="button" class="btn btn-outline-info">Info</button>
+									<button type="button" class="btn btn-outline-light">Light</button>
+									<button type="button" class="btn btn-outline-dark">Dark</button>
+								</p>
+							</div>
+
+						</section>
+
+
+						<section class="py-5 bg-light">
+
+							<div class="container" id="images">
+
+								<h2 class="mb-3">Images</h2>
+
+								<img src="https://files.layered.market/plugins/if-menu-icon.jpg" width="100" height="100" alt="If Menu - Visibility control for menu items" class="img-thumbnail" loading="lazy">
+							</div>
+
+						</section>
+
+
+						<section class="py-5 bg-white">
+
+							<div class="container" id="navs">
+
+								<h2 class="mb-3">Navs</h2>
+
+								<ul class="nav my-2">
+									<li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+									<li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a></li>
+								</ul>
+
+								<ul class="nav nav-tabs my-2">
+									<li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+									<li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a></li>
+								</ul>
+
+								<ul class="nav nav-pills my-2">
+									<li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+									<li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a></li>
+								</ul>
+
+							</div>
+
+						</section>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<section class="section-feedback bg-warning py-2">
+			<p class="text-center mb-0">It even has this tiny helpful section. <a href="#"><u>Which can have links</u></a></p>
+		</section>
+
+
+		<footer class="site-footer pt-5 pb-4">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<h5 class="subtitle">Layered Design</h5>
+						<ul class="nicer-list">
+							<li><a href="#">Submenu</a></li>
+							<li><a href="#">Support</a></li>
+							<li><span class="badge badge-light js-version">v1.0.0</span></li>
+						</ul>
+					</div>
+					<div class="col-xs-6 col-md-3">
+						<h5 class="subtitle">Layered</h5>
+						<ul class="nicer-list">
+							<li><a href="https://laye.red" target="_blank">Layered</a></li>
+							<li><a href="https://medium.com/layered/tagged/wordpress" target="_blank">Blog</a></li>
+							<li>
+								<a href="https://twitter.com/LayeredMarket" target="_blank" class="social-link social-link-twitter">@LayeredMarket</a>&nbsp;
+							</li>
+						</ul>
+					</div>
+					<div class="col-xs-6 col-md-3">
+						<h5 class="subtitle">Resources</h5>
+						<ul class="nicer-list">
+							<li><a href="#">Terms &amp; Conditions</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="dist/layered.js"></script>
+
+	</body>
+</html>

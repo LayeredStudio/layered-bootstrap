@@ -14,6 +14,8 @@ jQuery(function($) {
 	// Tooltips
 	$('[data-toggle="tooltip"]').tooltip();
 
+	$('.js-version').text(`v${L.version}`)
+
 })
 
 
