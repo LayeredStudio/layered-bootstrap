@@ -1,9 +1,7 @@
 
 
 .btn {
-	text-transform: uppercase;
-	/*mix-blend-mode: multiply;*/
-
+	letter-spacing: 0.2px;
 }
 
 @each $color, $value in $theme-colors {
