@@ -83,4 +83,11 @@ L.toast.error = function(content, title, options) {
 	return L.toast(content, title, options);
 }
 
+L.getUrlParam = (key, hash) => {
+	const qs = hash ? location.hash : location.search
+	const params = new URLSearchParams(qs.slice(1))
+
+	return params.get(key)
+}
+
 window.jQuery = jQuery
