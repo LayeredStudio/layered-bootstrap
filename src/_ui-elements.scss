@@ -215,9 +215,8 @@ input:disabled + .switcher__indicator::before {
 /* UI - Site footer */
 
 .site-footer {
-	border-top: 5px solid $primary;
-	color: $gray-100;
-	background-color: $purple;
+	border-top: 1px solid $primary-lighter;
+	background-color: $gray-100;
 }
 
 .site-footer.mini {
@@ -225,13 +224,13 @@ input:disabled + .switcher__indicator::before {
 }
 
 .site-footer a {
-	color: $gray-200;
-	border-bottom: 3px solid transparent;
+	color: $gray-600;
+	border-bottom: 2px solid transparent;
 }
 
 .site-footer a:hover {
-	color: #fff;
-	border-color: $primary;
+	color: $primary;
+	border-color: currentColor;
 	text-decoration: none;
 }
 
