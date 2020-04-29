@@ -20,7 +20,7 @@
 
 		<script>
 		var L = {
-			version:	'1.1',
+			version:	'1.2',
 			siteUrl:	'https://laye.red',
 			apiUrl:		'https://laye.red/api',
 			user:		null
@@ -77,13 +77,9 @@
 
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-2 border-right py-3">
+					<div class="col-md-2 border-right bg-light py-3">
 
 						<div class="sticky-top" style="top: 64px">
-							<p class="lead mb-1"><a href="index.html">Layered Design</a></p>
-							<p class="lead mb-1"><a href="">Brand</a></p>
-							<p class="lead mb-1"><a href="">Marketing</a></p>
-							<p class="lead mb-1"><a href="components.html">Components</a></p>
 							<ul class="nav flex-column">
 								<li class="nav-item">
 									<a class="nav-link active" href="#">How to use</a>
@@ -108,27 +104,28 @@
 
 					</div>
 					<div class="col-md-10">
-						<section class="py-5 bg-white" id="get-started">
+						<section class="py-5" id="get-started">
 
 							<div class="container">
 								<h2>How to use</h2>
 								<p class="lead">Include it in your projects like this:</p>
 								
 								<h4>JS &amp; CSS</h4>
-								<pre><code class="language-html">&lt;link rel="stylesheet" href="dist/layered.css"&gt;
-			&lt;script src="http://jsdelivr.net/..."&gt;&lt;/script&gt;</code></pre>
+								<pre class="bg-primary-lighter rounded p-3"><code class="language-html">&lt;link rel="stylesheet" href="dist/layered.css"&gt;
+&lt;script src="http://jsdelivr.net/..."&gt;&lt;/script&gt;</code></pre>
 
 								<h4>JS &amp; SASS</h4>
 								<p>Install the library <code>npm i @layered/layered-design</code></p>
 								<p>Then include it in your project</p>
-								<pre><code class="language-sass">// main.scss
-			@import '~@layered/layered-design';</code></pre>
+								<pre class="bg-primary-lighter rounded p-3"><code class="language-sass">// main.scss
+@import '~@layered/layered-design';</code></pre>
 							</div>
 
 						</section>
 
+						<hr>
 
-						<section class="py-5 bg-light">
+						<section class="py-5">
 
 							<div class="container" id="alerts">
 
@@ -169,6 +166,7 @@
 
 						</section>
 
+						<hr>
 
 						<section class="py-5">
 							<div class="container" id="badges">
@@ -282,8 +280,9 @@
 
 						</section>
 
+						<hr>
 
-						<section class="py-5 bg-light">
+						<section class="py-5">
 
 							<div class="container" id="images">
 
@@ -294,8 +293,9 @@
 
 						</section>
 
+						<hr>
 
-						<section class="py-5 bg-white">
+						<section class="py-5">
 
 							<div class="container" id="navs">
 

@@ -1,6 +1,6 @@
 {
   "name": "@layered/layered-design",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Layered design system, based on Bootstrap",
   "style": "dist/layered.css",
   "sass": "src/layered.scss",
