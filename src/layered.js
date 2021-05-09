@@ -4,7 +4,7 @@ import './layered.scss'
 
 
 // JS
-import bootstrap from 'bootstrap'
+import { Toast } from 'bootstrap'
 
 
 // Start UI
@@ -24,63 +24,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
 L = L || {}
 
-L.toast = function(content, title, options) {
-
-	if (typeof title === 'object') {
-		options = title
-		title = null
-	}
-
-	options = Object.assign({
-		type:		'default',
+L.toast = function(content, options) {
+	options = {
+		type:		'secondary',
 		subtitle:	'',
-		delay:		10000,
-	}, options || {});
-
-	options.delay = Number.isInteger(options.delay) && options.delay > 0 ? `data-delay="${options.delay}"` : 'data-autohide="false"';
-	content = content || '';
-
-	var toasts = jQuery('.toasts');
-	if (!toasts.length) {
-		toasts = jQuery('<div class="toasts" aria-live="polite" aria-atomic="true" style="position: fixed;bottom: 1rem;right: 1rem;"></div>').appendTo(document.body);
+		animation:	true,
+		autohide:	true,
+		delay:		7000,
+		...options
 	}
 
-	title = title ? `<div class="toast-header">
-		<strong class="mr-auto">${title}</strong>
-		<small>${options.subtitle}</small>
-		<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		</button>
-	</div>` : '';
+	let $toasts = document.querySelector('.toast-container');
+	if (!$toasts) {
+		$toasts = document.createElement('div')
+		$toasts.classList.add('toast-container', 'position-fixed', 'bottom-0', 'end-0', 'p-3')
+		$toasts.setAttribute('aria-live', 'polite')
+		$toasts.setAttribute('aria-atomic', 'true')
+		document.body.appendChild($toasts)
+	}
 
-	return jQuery(`<div class="toast toast-${options.type}" role="alert" aria-live="assertive" aria-atomic="true" ${options.delay}>
-		${title}
-		<div class="toast-body">${content}</div>
-	</div>`).appendTo(toasts).toast('show');
-}
+	const $toast = document.createElement('div')
+	$toast.classList.add('toast', `bg-${options.type}`, 'text-white', 'border-0')
 
-L.toast.info = function(content, title, options) {
-	options = options || {};
-	options.type = 'info';
-	return L.toast(content, title, options);
-}
+	const $toastContent = document.createElement('div')
+	$toastContent.classList.add('toast-body')
+	$toastContent.innerText = content
+	$toast.appendChild($toastContent)
+	$toast.setAttribute('role', 'alert')
+	$toast.setAttribute('aria-live', 'assertive')
+	$toast.setAttribute('aria-atomic', 'true')
 
-L.toast.success = function(content, title, options) {
-	options = options || {};
-	options.type = 'success';
-	return L.toast(content, title, options);
-}
+	$toasts.appendChild($toast)
 
-L.toast.warning = function(content, title, options) {
-	options = options || {};
-	options.type = 'warning';
-	return L.toast(content, title, options);
-}
+	const toast = new Toast($toast, {
+		animation: options.animation,
+		autohide: options.autohide,
+		delay: options.delay,
+	})
 
-L.toast.error = function(content, title, options) {
-	options = options || {};
-	options.type = 'error';
-	return L.toast(content, title, options);
+	toast.show()
+
+	return toast
 }
 
 L.getUrlParam = (key, hash) => {
