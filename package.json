@@ -1,6 +1,6 @@
 {
   "name": "@layered/layered-design",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "Layered design system, based on Bootstrap",
   "style": "dist/layered.css",
   "sass": "src/layered.scss",
@@ -8,8 +8,8 @@
   "scripts": {
     "prettier": "prettier \"src/**/*.{js,sass}\"",
     "prettier:write": "npm run prettier -- --write",
-    "build": "webpack",
-    "build:dev": "NODE_ENV=development webpack",
+    "build": "webpack --node-env=production",
+    "build:dev": "webpack --node-env=development",
     "watch": "npm run build -- --watch",
     "watch:dev": "HMR=true npm run build:dev -- --watch"
   },
