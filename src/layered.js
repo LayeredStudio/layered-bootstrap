@@ -4,19 +4,19 @@ import './layered.scss'
 
 
 // JS
-import jQuery from 'jquery'
 import bootstrap from 'bootstrap'
 
 
 // Start UI
-jQuery(function($) {
-
+document.addEventListener('DOMContentLoaded', () => {
 	// Tooltips
-	$('[data-toggle="tooltip"]').tooltip();
+	//$('[data-toggle="tooltip"]').tooltip();
 
-	$('.js-version').text(`v${L.version || 1}`)
-
-})
+	const $jsVersion = document.querySelector('.js-version')
+	if ($jsVersion) {
+		$jsVersion.innerText = `v${L.version || 1}`
+	}
+});
 
 
 
@@ -89,5 +89,3 @@ L.getUrlParam = (key, hash) => {
 
 	return params.get(key)
 }
-
-window.jQuery = jQuery

@@ -2,63 +2,10 @@
 @mixin badge-variant-outline($bg) {
   border: 1px solid $bg;
   color: $bg;
-
-  @at-root a#{&} {
-    @include hover-focus() {
-      color: color-yiq($bg);
-      background-color: darken($bg, 10%);
-    }
-
-    &:focus,
-    &.focus {
-      outline: 0;
-      box-shadow: 0 0 0 $badge-focus-width rgba($bg, .5);
-    }
-  }
 }
 
 @each $color, $value in $theme-colors {
 	.badge-outline-#{$color} {
 		@include badge-variant-outline($value);
 	}
-}
-
-.badge-light-primary {
-	background-color: $primary-lighter;
-	color: $primary;
-}
-
-.badge-light-secondary {
-	background-color: $gray-200;
-	color: $secondary;
-}
-
-.badge-light-success {
-	background-color: lighten($success, 50%);
-	color: $success;
-}
-
-.badge-light-danger {
-	background-color: lighten($danger, 40%);
-	color: $danger;
-}
-
-.badge-light-warning {
-	background-color: lighten($warning, 40%);
-	color: $warning;
-}
-
-.badge-light-info {
-	background-color: lighten($info, 50%);
-	color: $info;
-}
-
-.badge-light-light {
-	background-color: lighten($light, 50%);
-	color: $gray-500;
-}
-
-.badge-light-dark {
-	background-color: lighten($dark, 60%);
-	color: $dark;
 }

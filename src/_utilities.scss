@@ -1,0 +1,15 @@
+
+$theme-colors: map-merge(
+	$theme-colors,
+	(
+		"primary-light": $primary-light,
+		"primary-lighter": $primary-lighter,
+		"secondary-light": $gray-200,
+		"success-light": lighten($success, 50%),
+		"danger-light": lighten($danger, 40%),
+		"warning-light": lighten($warning, 40%),
+		"info-light": lighten($info, 50%),
+	)
+);
+
+$spacers: map-merge($spacers, $custom-spacers);

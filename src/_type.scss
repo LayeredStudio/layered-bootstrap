@@ -1,28 +1,14 @@
 
 .small-text {
-    font-size: 0.9rem;
+	font-size: 0.9rem;
 }
 
 .smaller-text {
-    font-size: 0.8rem;
+	font-size: 0.8rem;
 }
 
 .subtitle {
 	text-transform: uppercase;
 	font-weight: 400;
 	font-size: 90%;
-}
-
-
-// TODO remove when upgrading to v5
-.display-5 {
-	font-size: 3rem;
-	font-weight: 300;
-	line-height: $display-line-height;
-}
-
-.display-6 {
-	font-size: 2.5rem;
-	font-weight: 300;
-	line-height: $display-line-height;
 }
