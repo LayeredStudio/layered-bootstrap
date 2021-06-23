@@ -4,11 +4,12 @@ $theme-colors: map-merge(
 	(
 		"primary-light": $primary-light,
 		"primary-lighter": $primary-lighter,
+		"blue": $blue,
 		"secondary-light": $gray-200,
-		"success-light": lighten($success, 50%),
+		"info-light": #DBEAFE,
+		"success-light": #D1FAE5,
 		"danger-light": lighten($danger, 40%),
 		"warning-light": lighten($warning, 40%),
-		"info-light": lighten($info, 50%),
 	)
 );
 
