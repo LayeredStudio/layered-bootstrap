@@ -18,15 +18,6 @@
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
 
-		<script>
-		var L = {
-			version:	'1.4.1',
-			siteUrl:	'https://laye.red',
-			apiUrl:		'https://laye.red/api',
-			user:		null
-		};
-		</script>
-
 		<link rel="stylesheet" href="dist/layered.css">
 	</head>
 	<body>
@@ -334,12 +325,11 @@
 								<h2 class="mb-3">Toasts</h2>
 
 								<p>
-									<button class="btn btn-outline-secondary" onclick="L.toast('This is an example toast')">Show default toast</button>
-									<button class="btn btn-outline-primary" onclick="L.toast('Nice, it happened!', { type: 'primary' })">Show primary toast</button>
-									<button class="btn btn-outline-success" onclick="L.toast('Action was successful', { type: 'success' })">Show success toast</button>
-									<button class="btn btn-outline-danger" onclick="L.toast('An error happened', { type: 'danger' })">Show danger toast</button>
+									<button class="btn btn-outline-secondary" onclick="toast('This is an example toast')">Show default toast</button>
+									<button class="btn btn-outline-primary" onclick="toast('✅ Nice, it happened!', { type: 'primary' })">Show primary toast</button>
+									<button class="btn btn-outline-success" onclick="toast('👌🏼 Action was successful', { type: 'success' })">Show success toast</button>
+									<button class="btn btn-outline-danger" onclick="toast('⚠️ An error happened', { type: 'danger' })">Show danger toast</button>
 								</p>
-
 							</div>
 
 						</section>
@@ -384,7 +374,10 @@
 			</div>
 		</footer>
 
-		<script src="dist/layered.js"></script>
+		<script type="module">
+		import { toast } from './dist/layered.js'
 
+		window.toast = toast
+		</script>
 	</body>
 </html>

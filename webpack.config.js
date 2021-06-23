@@ -2,10 +2,16 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   mode: process.env.NODE_ENV || 'production',
+  experiments: {
+    outputModule: true,
+  },
   entry: { 'layered': './src/layered.js' },
   output: {
     path: __dirname + '/dist',
     filename: '[name].js',
+    library: {
+      type: 'module',
+    },
   },
   module: {
     rules: [

@@ -7,30 +7,15 @@ import './layered.scss'
 import { Toast } from 'bootstrap'
 
 
-// Start UI
-document.addEventListener('DOMContentLoaded', () => {
-	// Tooltips
-	//$('[data-toggle="tooltip"]').tooltip();
-
-	const $jsVersion = document.querySelector('.js-version')
-	if ($jsVersion) {
-		$jsVersion.innerText = `v${L.version || 1}`
-	}
-});
-
-
-
 /* UI Elements */
 
-L = L || {}
-
-L.toast = function(content, options) {
+const toast = (content, options) => {
 	options = {
-		type:		'secondary',
+		type:		'dark',
 		subtitle:	'',
 		animation:	true,
 		autohide:	true,
-		delay:		7000,
+		delay:		6000,
 		...options
 	}
 
@@ -41,6 +26,11 @@ L.toast = function(content, options) {
 		$toasts.setAttribute('aria-live', 'polite')
 		$toasts.setAttribute('aria-atomic', 'true')
 		document.body.appendChild($toasts)
+	}
+
+	if (content instanceof Error) {
+		options.type = 'danger'
+		content = content.message
 	}
 
 	const $toast = document.createElement('div')
@@ -67,9 +57,14 @@ L.toast = function(content, options) {
 	return toast
 }
 
-L.getUrlParam = (key, hash) => {
+const getUrlParam = (key, hash) => {
 	const qs = hash ? location.hash : location.search
 	const params = new URLSearchParams(qs.slice(1))
 
 	return params.get(key)
+}
+
+export {
+	toast,
+	getUrlParam,
 }
