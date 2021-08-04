@@ -11,10 +11,50 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 
-@import 'utilities';
-
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/utilities";
+
+$all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans, $grays);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "background-color": map-merge(
+      map-get($utilities, "background-color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "background-color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+  )
+);
+
+// temp
+.bg-primary-light {
+	background-color: $purple-300;
+}
+.bg-primary-lighter {
+	background-color: $purple-100;
+}
+.bg-secondary-light {
+	background-color: $gray-300;
+}
+.bg-info-light {
+	background-color: $blue-100;
+}
+.bg-success-light {
+	background-color: $green-100;
+}
+.bg-warning-light {
+	background-color: $orange-100;
+}
+.bg-danger-light {
+	background-color: $red-100;
+}
 
 
 // Bootstrap Layout & components
