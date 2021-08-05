@@ -2,7 +2,6 @@
 // Layered Design System variables
 @import 'variables';
 
-
 // Bootstrap files
 // @import '~bootstrap';
 // OR
@@ -10,6 +9,10 @@
 // Bootstrap Configuration
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
+
+$spacers: map-merge($spacers, (
+  6: $spacer * 4,
+));
 
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/utilities";
@@ -24,6 +27,23 @@ $utilities: map-merge(
       (
         values: map-merge(
           map-get(map-get($utilities, "background-color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "color": map-merge(
+      map-get($utilities, "color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "color"), "values"),
           (
             $all-colors
           ),
