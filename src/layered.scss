@@ -9,6 +9,7 @@
 // Bootstrap Configuration
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
 
 $info: $blue;
 
@@ -17,6 +18,7 @@ $spacers: map-merge($spacers, (
   6: $spacer * 4,
 ));
 
+@import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
 
